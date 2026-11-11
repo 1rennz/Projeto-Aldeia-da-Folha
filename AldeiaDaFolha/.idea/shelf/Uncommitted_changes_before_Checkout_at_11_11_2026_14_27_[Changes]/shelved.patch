@@ -1,0 +1,332 @@
+Index: src/main/java/TelaLogin.java
+===================================================================
+diff --git a/src/main/java/TelaLogin.java b/src/main/java/TelaLogin.java
+deleted file mode 100644
+--- a/src/main/java/TelaLogin.java	(revision d0d6da7a827eba179105419d1e9c72ac486039ba)
++++ /dev/null	(revision d0d6da7a827eba179105419d1e9c72ac486039ba)
+@@ -1,65 +0,0 @@
+-import javax.swing.*;
+-import java.awt.*;
+-
+-public class TelaLogin {
+-
+-    public static void main(String[] args) {
+-        SwingUtilities.invokeLater(() -> mostrarFormulario());
+-    }
+-
+-    public static void mostrarFormulario() {
+-        JFrame janela = new JFrame("Tela de login");
+-
+-        janela.setSize(700, 400);
+-        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+-        janela.setLocationRelativeTo(null);
+-        janela.setVisible(true);
+-
+-        JPanel formulario = new JPanel(new GridLayout(0, 1));
+-
+-        JTextField campoEmail = new JTextField(20);
+-        JPasswordField campoSenha = new JPasswordField(20);
+-        JTextField campoCPF = new JTextField(20);
+-        JButton botaoEnviar = new JButton("Enviar");
+-
+-        JLabel labelEmail = new JLabel("Email:");
+-        JLabel labelSenha = new JLabel("Senha:");
+-        JLabel labelCPF = new JLabel("CPF:");
+-
+-        Dimension tamanhoRotulo = new Dimension(45, 20);
+-        labelEmail.setPreferredSize(tamanhoRotulo);
+-        labelSenha.setPreferredSize(tamanhoRotulo);
+-        labelCPF.setPreferredSize(tamanhoRotulo);
+-
+-        JPanel linhaEmail = new JPanel(new BorderLayout(7, 0));
+-        linhaEmail.add(labelEmail, BorderLayout.WEST);
+-        linhaEmail.add(campoEmail);
+-
+-        JPanel linhaSenha = new JPanel(new BorderLayout(7, 0));
+-        linhaSenha.add(labelSenha, BorderLayout.WEST);
+-        linhaSenha.add(campoSenha);
+-
+-        JPanel linhaCPF = new JPanel(new BorderLayout(7, 0));
+-        linhaCPF.add(labelCPF, BorderLayout.WEST);
+-        linhaCPF.add(campoCPF);
+-
+-        JPanel linhaBotao = new JPanel(new FlowLayout(FlowLayout.LEFT, 52, 2));
+-        linhaBotao.add(botaoEnviar);
+-
+-        formulario.add(linhaEmail);
+-        formulario.add(linhaSenha);
+-        formulario.add(linhaCPF);
+-        formulario.add(linhaBotao);
+-
+-        janela.setLayout(new GridBagLayout());
+-        janela.add(formulario);
+-
+-        botaoEnviar.addActionListener(evento -> {
+-            String email = campoEmail.getText();
+-            String cpf = campoCPF.getText();
+-            String senha = new String(campoSenha.getPassword());
+-
+-            JOptionPane.showMessageDialog(janela, "login cadastrado!");
+-        });
+-    }
+-}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"ms-21\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision d0d6da7a827eba179105419d1e9c72ac486039ba)
++++ b/.idea/misc.xml	(date 1794417738664)
+@@ -1,4 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
+   <component name="ProjectRootManager" version="2" project-jdk-name="ms-21" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: src/main/java/TelaNinja.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/TelaNinja.java b/src/main/java/TelaNinja.java
+new file mode 100644
+--- /dev/null	(date 1794417355942)
++++ b/src/main/java/TelaNinja.java	(date 1794417355942)
+@@ -0,0 +1,75 @@
++import javax.swing.*;
++import javax.swing.*;
++import java.awt.*;
++public class TelaNinja {
++
++    public static void main(String[] args) {
++        SwingUtilities.invokeLater(() -> mostrarFormulario());
++    }
++
++    public static void mostrarFormulario() {
++        JFrame janela = new JFrame("Tela de login");
++
++        janela.setSize(700, 400);
++        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
++        janela.setLocationRelativeTo(null);
++        janela.setVisible(true);
++
++        JPanel formulario = new JPanel(new GridLayout(0, 1));
++
++        JTextField campoEmail = new JTextField(20);
++        JPasswordField campoSenha = new JPasswordField(20);
++        JTextField campoCPF = new JTextField(20);
++        JButton botaoEnviar = new JButton("Enviar");
++
++        JLabel labelEmail = new JLabel("Email:");
++        JLabel labelSenha = new JLabel("Senha:");
++        JLabel labelCPF = new JLabel("CPF:");
++
++        Dimension tamanhoRotulo = new Dimension(45, 20);
++        labelEmail.setPreferredSize(tamanhoRotulo);
++        labelSenha.setPreferredSize(tamanhoRotulo);
++        labelCPF.setPreferredSize(tamanhoRotulo);
++
++        JPanel linhaEmail = new JPanel(new BorderLayout(7, 0));
++        linhaEmail.add(labelEmail, BorderLayout.WEST);
++        linhaEmail.add(campoEmail);
++
++        JPanel linhaSenha = new JPanel(new BorderLayout(7, 0));
++        linhaSenha.add(labelSenha, BorderLayout.WEST);
++        linhaSenha.add(campoSenha);
++
++        JPanel linhaCPF = new JPanel(new BorderLayout(7, 0));
++        linhaCPF.add(labelCPF, BorderLayout.WEST);
++        linhaCPF.add(campoCPF);
++
++        JPanel linhaBotao = new JPanel(new FlowLayout(FlowLayout.LEFT, 52, 2));
++        linhaBotao.add(botaoEnviar);
++
++        JPanel linhaNiveis = new JPanel(new FlowLayout(FlowLayout.CENTER));
++
++        linhaNiveis.add(new JLabel("Nível:"));
++        linhaNiveis.add(new JCheckBox("Junin"));
++        linhaNiveis.add(new JCheckBox("Genin"));
++        linhaNiveis.add(new JCheckBox("Kage"));
++        linhaNiveis.add(new JCheckBox("Hokage"));
++
++
++        formulario.add(linhaEmail);
++        formulario.add(linhaSenha);
++        formulario.add(linhaCPF);
++        formulario.add(linhaNiveis);
++        formulario.add(linhaBotao);
++
++        janela.setLayout(new GridBagLayout());
++        janela.add(formulario);
++
++        botaoEnviar.addActionListener(evento -> {
++            String email = campoEmail.getText();
++            String cpf = campoCPF.getText();
++            String senha = new String(campoSenha.getPassword());
++
++            JOptionPane.showMessageDialog(janela, "login cadastrado!");
++        });
++    }
++}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"47bc9b0c-9007-4b4d-b6f3-2d31d4fbdb87\" name=\"Changes\" comment=\"teste4\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/TelaLogin.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/TelaLogin.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$/..\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {}\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/1rennz/Projeto-Aldeia-da-Folha.git\",\r\n    \"accountId\": \"d48bc680-29c4-4fa5-81ff-494a0d4128b7\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 6,\r\n  \"fromUser\": false\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"3LyA7efP8Al5w6LdmgYzo24tJr6\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"codeWithMe.voiceChat.enabledByDefault\": \"false\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/JAVAPROG/AldeiaDaFolha\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"AldeiaDaFolha\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"47bc9b0c-9007-4b4d-b6f3-2d31d4fbdb87\" name=\"Changes\" comment=\"\" />\r\n      <created>1794415768104</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1794415768104</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"teste2\" />\r\n    <MESSAGE value=\"Add files via upload\" />\r\n    <MESSAGE value=\"teste3\" />\r\n    <MESSAGE value=\"teste4\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"teste4\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d0d6da7a827eba179105419d1e9c72ac486039ba)
++++ b/.idea/workspace.xml	(date 1794417738656)
+@@ -4,66 +4,95 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="47bc9b0c-9007-4b4d-b6f3-2d31d4fbdb87" name="Changes" comment="teste4">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelaLogin.java" afterDir="false" />
++    <list default="true" id="47bc9b0c-9007-4b4d-b6f3-2d31d4fbdb87" name="Changes" comment="teste5">
++      <change afterPath="$PROJECT_DIR$/src/main/java/TelaNinja.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/TelaLogin.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/out/production/TelaExemplosIntelliJ/TelaLogin.class" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$/.." value="master" />
++        <entry key="$PROJECT_DIR$/.." value="main" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {}
+-}]]></component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/1rennz/Projeto-Aldeia-da-Folha.git",
+-    "accountId": "d48bc680-29c4-4fa5-81ff-494a0d4128b7"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {}
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/1rennz/Projeto-Aldeia-da-Folha.git&quot;,
++    &quot;accountId&quot;: &quot;d48bc680-29c4-4fa5-81ff-494a0d4128b7&quot;
+   }
+-}]]></component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 6,
+-  "fromUser": false
+-}]]></component>
++}</component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 6,
++  &quot;fromUser&quot;: false
++}</component>
+   <component name="ProjectId" id="3LyA7efP8Al5w6LdmgYzo24tJr6" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "codeWithMe.voiceChat.enabledByDefault": "false",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/JAVAPROG/AldeiaDaFolha",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;Application.TelaLogin.executor&quot;: &quot;Run&quot;,
++    &quot;Application.TelaNinja.executor&quot;: &quot;Run&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Pag1&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/JAVAPROG/AldeiaDaFolha&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
++    <configuration name="TelaNinja" type="Application" factoryName="Application" temporary="true">
++      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/ms-21.0.12.1" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
++      <option name="MAIN_CLASS_NAME" value="TelaNinja" />
++      <module name="tela-exemplos" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration default="true" type="JetRunConfigurationType">
+       <module name="AldeiaDaFolha" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.TelaNinja" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+@@ -91,6 +120,7 @@
+     <MESSAGE value="Add files via upload" />
+     <MESSAGE value="teste3" />
+     <MESSAGE value="teste4" />
+-    <option name="LAST_COMMIT_MESSAGE" value="teste4" />
++    <MESSAGE value="teste5" />
++    <option name="LAST_COMMIT_MESSAGE" value="teste5" />
+   </component>
+ </project>
+\ No newline at end of file
