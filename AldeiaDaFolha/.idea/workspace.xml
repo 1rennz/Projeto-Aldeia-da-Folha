@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47bc9b0c-9007-4b4d-b6f3-2d31d4fbdb87" name="Changes" comment="teste3">
+    <list default="true" id="47bc9b0c-9007-4b4d-b6f3-2d31d4fbdb87" name="Changes" comment="teste4">
       <change beforePath="$PROJECT_DIR$/src/main/java/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelaLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "1rennz"
-  }
+  "lastFilter": {}
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
@@ -93,6 +90,7 @@
     <MESSAGE value="teste2" />
     <MESSAGE value="Add files via upload" />
     <MESSAGE value="teste3" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste3" />
+    <MESSAGE value="teste4" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste4" />
   </component>
 </project>

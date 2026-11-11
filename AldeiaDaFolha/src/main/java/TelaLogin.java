@@ -10,7 +10,7 @@ public class TelaLogin {
     public static void mostrarFormulario() {
         JFrame janela = new JFrame("Tela de login");
 
-        janela.setSize(600, 400);
+        janela.setSize(700, 400);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.setLocationRelativeTo(null);
         janela.setVisible(true);
